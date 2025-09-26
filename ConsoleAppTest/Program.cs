@@ -112,8 +112,7 @@ public class Map
     public void HideCursor() => Console.CursorVisible = false;
     public void ShowCursor() => Console.CursorVisible = true;
 
-    public void SetCursorSize(int size) => Console.CursorSize = size;
-    public int GetCursorSize() => Console.CursorSize;
+    public int CursorSize { get => Console.CursorSize; set => Console.CursorSize = value; }
 
     public (int Left, int Top) GetCursorPosition() => (Console.CursorLeft, Console.CursorTop);
 
@@ -226,9 +225,7 @@ class Game
             map.Update();
             player.DrawPlayer(ref map);
             
-            
             char input = Console.ReadKey().KeyChar;
-            
             switch (input)
             {
                 case 'z':
@@ -245,6 +242,7 @@ class Game
                     break;
                 default: break;
             }
+            
             // if (Input.GetInput("z")) { map.Update(); player.Move(0, -1); };
             // if (Input.GetInput("q")) { map.Update(); player.Move(-1, 0); };
             // if (Input.GetInput("s")) { map.Update(); player.Move(0, 1); };

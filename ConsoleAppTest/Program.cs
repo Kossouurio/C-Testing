@@ -240,6 +240,9 @@ class Game
                 case 'd':
                     player.Move(1, 0);
                     break;
+                case 'a':
+                    map.Exit();
+                    break;
                 default: break;
             }
             

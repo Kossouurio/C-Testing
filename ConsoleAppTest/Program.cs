@@ -1,5 +1,6 @@
 ﻿
 using System.Numerics;
+using System.Text.Json.Serialization;
 
 public class Input
 {
@@ -203,7 +204,6 @@ public class Player
 
     public void Update()
     {
-
     }
 }
 
@@ -243,13 +243,9 @@ class Game
                 default: break;
             }
             
-            // if (Input.GetInput("z")) { map.Update(); player.Move(0, -1); };
-            // if (Input.GetInput("q")) { map.Update(); player.Move(-1, 0); };
-            // if (Input.GetInput("s")) { map.Update(); player.Move(0, 1); };
-            // if (Input.GetInput("d")) { map.Update(); player.Move(1, 0); };
-            
             //if (Input.GetInput("a")) { map.Exit(); };
         }
+
 
     }
 }
